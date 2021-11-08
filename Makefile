@@ -45,7 +45,7 @@ bin/grpc-client:
 	@mkdir -p bin/
 	@cd examples/ && go install -v -ldflags $(LD_FLAGS) $(REPO_PATH)/examples/grpc-client
 
-bin/example-app:
+bin/example-app: examples/example-app/main.go
 	@mkdir -p bin/
 	@cd examples/ && go install -v -ldflags $(LD_FLAGS) $(REPO_PATH)/examples/example-app
 
